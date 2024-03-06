@@ -1,0 +1,84 @@
+.parallax-wrapper{
+  background: linear-gradient(#2b1055, #7597de);
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  overflow: hidden;
+  top:0;
+  transition: 1s ease;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 1011;
+    background: linear-gradient(to top, #000000, transparent);
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+}
+
+
+
+.moon {
+  mix-blend-mode: screen;
+
+}
+
+.mountains {
+  z-index: 10;
+  filter: brightness(0.6);
+}
+
+.back {
+  z-index: 2;
+  filter: brightness(0.6);
+}
+
+.text {
+  position: absolute;
+  top: 250px;
+  color: white;
+  font-size: 9vw;
+  white-space: nowrap;
+  z-index: 9;
+  left: 0px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+
+@media (max-width: 768px) {
+  header .desktop__menu {
+    display: none;
+  }
+
+  .text {
+    left: 27%;
+  }
+}
+
+
+.drift-up{
+  position: absolute;
+  top: -100vh !important;
+}
